@@ -47,6 +47,34 @@
   font-style: italic;
 }
 
+.mylingo-chip-link {
+  color: #3B82F6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mylingo-chip-link:hover {
+  color: #2563EB;
+  text-decoration: underline;
+}
+
+.mylingo-chip-loader {
+  font-size: 14px;
+  animation: spin 1s linear infinite;
+  margin-left: 4px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .mylingo-chip-tts {
   background: #F3F4F6;
   border: none;
@@ -328,6 +356,128 @@
   margin-top: 24px;
   padding-top: 20px;
   border-top: 1px solid #E5E7EB;
+}
+
+/* New info grid layout */
+.mylingo-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mylingo-info-row {
+  display: grid;
+  grid-template-columns: 32px 120px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+  border-left: 3px solid #3B82F6;
+}
+
+.mylingo-info-icon {
+  font-size: 18px;
+  text-align: center;
+}
+
+.mylingo-info-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mylingo-info-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+/* Analysis text */
+.mylingo-analysis-text {
+  background: #F9FAFB;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #374151;
+  white-space: pre-wrap;
+}
+
+/* Loading state */
+.mylingo-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px;
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.mylingo-spinner {
+  font-size: 24px;
+  animation: spin 1s linear infinite;
+}
+
+/* Action buttons row */
+.mylingo-actions-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.mylingo-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.mylingo-listen-btn {
+  background: #EFF6FF;
+  color: #2563EB;
+  border: 2px solid #DBEAFE;
+}
+
+.mylingo-listen-btn:hover {
+  background: #DBEAFE;
+  transform: translateY(-2px);
+}
+
+.mylingo-save-btn-small {
+  background: #10B981;
+  color: white;
+}
+
+.mylingo-save-btn-small:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.mylingo-save-btn-small:disabled {
+  background: #D1D5DB;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mylingo-btn-icon {
+  font-size: 16px;
 }
 
 /* Toast notifications */

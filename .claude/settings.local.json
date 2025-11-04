@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:developer.chrome.com)",
+      "Bash(node -c /Users/nan/Project/MyLingo/ai-utils.js)",
+      "Bash(node -e \"\nconst fs = require(''fs'');\nconst content = fs.readFileSync(''content.js'', ''utf8'');\n\n// Check if init() is called at the bottom\nconst hasInitCall = content.includes(''if (document.readyState'');\nconsole.log(''Has init() call at bottom:'', hasInitCall);\n\n// Check if event listeners are added\nconst hasEventListeners = content.includes(''document.addEventListener(\\''mouseup\\'', handleSelection)'');\nconsole.log(''Has mouseup event listener:'', hasEventListeners);\n\n// Find where init is called\nconst lines = content.split(''\\n'');\nconst lastLines = lines.slice(-10);\nconsole.log(''\\nLast 10 lines:'');\nlastLines.forEach((line, i) => console.log(lines.length - 10 + i + '':'', line));\n\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

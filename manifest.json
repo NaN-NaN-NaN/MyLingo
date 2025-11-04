@@ -19,7 +19,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": ["ai-utils.js", "i18n.js", "content.js"],
       "css": ["content.css"],
       "run_at": "document_idle"
     }
@@ -32,6 +32,9 @@
       "128": "icons/icon128.png"
     }
   },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -39,7 +42,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["chip.html", "dialog.html"],
+      "resources": ["chip.html", "dialog.html", "ai-utils.js", "i18n.js"],
       "matches": ["<all_urls>"]
     }
   ]
